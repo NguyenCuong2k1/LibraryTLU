@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frag.HomeFragment"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hiển thị theo: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            app:layout_constraintLeft_toRightOf="@id/tvLabel"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content" >
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tất cả"
+                android:layout_marginHorizontal="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rbBookBorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đang mượn"
+                android:layout_marginHorizontal="16dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbBookReturned"
+                android:text="Đã trả"
+                android:layout_marginHorizontal="16dp"/>
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/rg"
+            android:id="@+id/rvBook"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

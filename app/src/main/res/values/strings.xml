@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LibraryTLU</string>
+    <string name="btnLogin">Đăng nhập với tư cách bạn đọc</string>
+    <string name="tvLabelEmail">Email</string>
+    <string name="tvLabelPass">Mật khẩu</string>
+    <string name="tvLabelForgotPass">Quên mật khẩu?</string>
+    <string name="tvLabelUser">Tên đăng nhập</string>
+    <string name="btnLoginLibrarian">Đăng nhập với tư cách thủ thư</string>
+    <string name="str_login">Đăng nhập</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_account">Tài khoản</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

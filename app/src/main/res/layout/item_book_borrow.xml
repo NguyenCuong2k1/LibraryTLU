@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imvBook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingHorizontal="8dp"
+        android:scaleType="fitCenter"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+    <TextView
+        android:id="@+id/tvNameBook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/imvBook"
+        android:text="Book name"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tình trạng: "
+        app:layout_constraintTop_toBottomOf="@id/tvNameBook"
+        app:layout_constraintLeft_toRightOf="@id/imvBook"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvNameBook"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="Chưa trả"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/tvLabelDateBorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày mượn: "
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/imvBook"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus"/>
+
+    <TextView
+        android:id="@+id/tvDateBorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelDateBorrow"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel"
+        android:textSize="13sp"
+        android:text="26/05/2022" />
+
+    <TextView
+        android:id="@+id/tvLabelExpirationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hạn trả: "
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/imvBook"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDateBorrow"/>
+
+    <TextView
+        android:id="@+id/tvDateExpiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelDateBorrow"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDateBorrow"
+        android:textSize="13sp"
+        android:text="26/05/2022" />
+
+    <TextView
+        android:id="@+id/tvLabelCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phí tam tính: "
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/imvBook"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelExpirationDate"/>
+
+    <TextView
+        android:id="@+id/tvCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/tvDateExpiration"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelExpirationDate"
+        android:textSize="13sp"
+        android:gravity="right"
+        android:text="10.000đ" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCost"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

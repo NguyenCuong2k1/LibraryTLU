@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -109,6 +110,18 @@ public class MainActivityStudent extends AppCompatActivity {
     }
 
     private void initView() {
+        Window window = this.getWindow();
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.white));
+
         checkAccount();
 
         Fragment fragment = new HomeFragment();
@@ -146,7 +159,6 @@ public class MainActivityStudent extends AppCompatActivity {
             if (value != null) {
                 int book_id = Integer.parseInt(value);
 
-                Log.d("qrcode=%s", value);
                 // do something
                 showProcessDialog();
 

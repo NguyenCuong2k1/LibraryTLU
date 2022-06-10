@@ -118,6 +118,7 @@
         android:textAllCaps="false"
         android:textSize="14sp"
         android:textColor="@color/white"
+        android:visibility="invisible"
         android:background="@drawable/bg_btn_login" />
 
 <!--    <TextView-->
